@@ -1,0 +1,296 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Gladius</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+</head>
+<body>
+    <script src="scripts/jquery-3.4.1.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/DataTables/jquery.dataTables.js"></script>
+    <link href="Content/DataTables/css/dataTables.bootstrap.css" rel="stylesheet" />
+    <link href="Content/DataTables/css/dataTables.jqueryui.css" rel="stylesheet" />
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <a class="navbar-brand" href="#">
+            <img src="assets/Old.png" width="30" height="30" /> <label class="text-white">Old Mutual</label>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Complaint<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">RCA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Action</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Quality Assurance</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Quality Assurance</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Report</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Mis</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Admin</a>
+                </li>
+            </ul>
+            <form class="form-inline">
+                <label class="btn btn-outline-success my-2 my-sm-0" type="submit">Lukade Anand</label>
+            </form>
+        </div>
+    </nav>
+    <br />
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-16"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-16"><h3>Complaints</h3></div>
+            <hr />
+        </div>
+        <div class="row">
+            <div class="col-sm-4"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-16"  >
+                <table id="table_format" class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>EMS CaseRef</th>
+                            <th>Mailbox Name</th>
+                            <th>Date Received</th>
+                            <th>Segment</th>
+                            <th>
+                                Product Type
+                                <!--<select id='filterText' style='display:inline-block' onchange='filterText()'>
+                                    <option disabled selected>Select</option>
+                                    <option value='Linked Investment'>Linked Investment</option>
+                                    <option value='RIP - Retirement Income Plan'>RIP - Retirement Income Plan</option>
+                                    <option value='all'>All</option>
+                                </select>-->
+                            </th>
+                            <th>Related Process</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="myTable">
+                        <tr class="content">
+                            <td>4248075</td>
+                            <td>Weaasdaslth CRM</td>
+                            <td>1/21/2020 1:58:23 PM </td>
+                            <td>Wealth</td>
+                            <td>Linked Investment</td>
+                            <td>Incomes</td>
+                            <td>In Progress</td>
+                        </tr>
+                        <tr class="content">
+                            <td>4248075</td>
+                            <td>Wealasdasdth CRM</td>
+                            <td>1/21/2020 1:58:23 PM </td>
+                            <td>Anand</td>
+                            <td>RIP - Retirement Income Plan</td>
+                            <td>Incomes</td>
+                            <td>In Progress</td>
+                        </tr>
+                        <tr class="content">
+                            <td>4248065</td>
+                            <td>asdasd CRM</td>
+                            <td>1/21/2020 1:58:23 PM </td>
+                            <td>Wealth</td>
+                            <td>Linked Investment</td>
+                            <td>Incomes</td>
+                            <td>In Progress</td>
+                        </tr>
+                        <tr class="content">
+                            <td>4248045</td>
+                            <td>asdasd CRM</td>
+                            <td>1/21/2020 1:58:23 PM </td>
+                            <td>Sanjay</td>
+                            <td>RIP - Retirement Income Plan</td>
+                            <td>Incomes</td>
+                            <td>In Progress</td>
+                        </tr>
+                        <tr class="content">
+                            <td>4248075</td>
+                            <td>Wealth CRM</td>
+                            <td>1/21/2020 1:58:23 PM </td>
+                            <td>Wealth</td>
+                            <td>Linked Investment</td>
+                            <td>Incomes</td>
+                            <td>In Progress</td>
+                        </tr>
+                        <tr class="content">
+                            <td>4248075</td>
+                            <td>Wealth CRM</td>
+                            <td>1/21/2020 1:58:23 PM </td>
+                            <td>Wealth</td>
+                            <td>RIP - Retirement Income Plan</td>
+                            <td>Incomes</td>
+                            <td>In Progress</td>
+                        </tr>
+                        <tr class="content">
+                            <td>4248065</td>
+                            <td>Wealth CRM</td>
+                            <td>1/21/2020 1:58:23 PM </td>
+                            <td>Wealth</td>
+                            <td>Linked Investment</td>
+                            <td>Incomes</td>
+                            <td>In Progress</td>
+                        </tr>
+                        <tr class="content">
+                            <td>4248045</td>
+                            <td>Wealth CRM</td>
+                            <td>1/21/2020 1:58:23 PM </td>
+                            <td>Wealth</td>
+                            <td>RIP - Retirement Income Plan</td>
+                            <td>Incomes</td>
+                            <td>In Progress</td>
+                        </tr>
+                        <tr class="content">
+                            <td>4248075</td>
+                            <td>Wealth CRM</td>
+                            <td>1/21/2020 1:58:23 PM </td>
+                            <td>Wealth</td>
+                            <td>Linked Investment</td>
+                            <td>Incomes</td>
+                            <td>In Progress</td>
+                        </tr>
+                        <tr class="content">
+                            <td>4248075</td>
+                            <td>Wealth CRM</td>
+                            <td>1/21/2020 1:58:23 PM </td>
+                            <td>Wealth</td>
+                            <td>RIP - Retirement Income Plan</td>
+                            <td>Incomes</td>
+                            <td>In Progress</td>
+                        </tr>
+                        <tr class="content">
+                            <td>4248065</td>
+                            <td>Wealth CRM</td>
+                            <td>1/21/2020 1:58:23 PM </td>
+                            <td>Wealth</td>
+                            <td>Linked Investment</td>
+                            <td>Incomes</td>
+                            <td>In Progress</td>
+                        </tr>
+                        <tr class="content">
+                            <td>4248045</td>
+                            <td>Wealth CRM</td>
+                            <td>1/21/2020 1:58:23 PM </td>
+                            <td>Wealth</td>
+                            <td>RIP - Retirement Income Plan</td>
+                            <td>Incomes</td>
+                            <td>In Progress</td>
+                        </tr>
+                        <tr class="content">
+                            <td>4248075</td>
+                            <td>Wealth CRM</td>
+                            <td>1/21/2020 1:58:23 PM </td>
+                            <td>Wealth</td>
+                            <td>Linked Investment</td>
+                            <td>Incomes</td>
+                            <td>In Progress</td>
+                        </tr>
+                        <tr class="content">
+                            <td>4248075</td>
+                            <td>Wealth CRM</td>
+                            <td>1/21/2020 1:58:23 PM </td>
+                            <td>Wealth</td>
+                            <td>RIP - Retirement Income Plan</td>
+                            <td>Incomes</td>
+                            <td>In Progress</td>
+                        </tr>
+                        <tr class="content">
+                            <td>4248065</td>
+                            <td>Wealth CRM</td>
+                            <td>1/21/2020 1:58:23 PM </td>
+                            <td>Wealth</td>
+                            <td>Linked Investment</td>
+                            <td>Incomes</td>
+                            <td>In Progress</td>
+                        </tr>
+                        <tr class="content">
+                            <td>4248045</td>
+                            <td>Wealth CRM</td>
+                            <td>1/21/2020 1:58:23 PM </td>
+                            <td>Wealth</td>
+                            <td>RIP - Retirement Income Plan</td>
+                            <td>Incomes</td>
+                            <td>In Progress</td>
+                        </tr>
+                        <tr class="content">
+                            <td>4248075</td>
+                            <td>Wealth CRM</td>
+                            <td>1/21/2020 1:58:23 PM </td>
+                            <td>Wealth</td>
+                            <td>Linked Investment</td>
+                            <td>Incomes</td>
+                            <td>In Progress</td>
+                        </tr>
+                        <tr class="content">
+                            <td>4248075</td>
+                            <td>Wealth CRM</td>
+                            <td>1/21/2020 1:58:23 PM </td>
+                            <td>Wealth</td>
+                            <td>RIP - Retirement Income Plan</td>
+                            <td>Incomes</td>
+                            <td>In Progress</td>
+                        </tr>
+                        <tr class="content">
+                            <td>4248065</td>
+                            <td>Wealth CRM</td>
+                            <td>1/21/2020 1:58:23 PM </td>
+                            <td>Wealth</td>
+                            <td>Linked Investment</td>
+                            <td>Incomes</td>
+                            <td>No Started</td>
+                        </tr>
+                        <tr class="content">
+                            <td>4248045</td>
+                            <td>Wealth CRM</td>
+                            <td>1/21/2020 1:58:23 PM </td>
+                            <td>Wealth</td>
+                            <td>RIP - Retirement Income Plan</td>
+                            <td>Incomes</td>
+                            <td>Complete</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+            </div>
+            
+        </div>
+    <script>
+            //function filterText() {
+            //    var rex = new RegExp($('#filterText').val());
+            //    if (rex == "/all/") { clearFilter() } else {
+            //        $('.content').hide();
+            //        $('.content').filter(function () {
+            //            return rex.test($(this).text());
+            //        }).show();
+            //    }
+            //}
+            //function clearFilter() {
+            //    $('.filterText').val('');
+            //    $('.content').show();
+            //}
+            $(document).ready(function () {
+                $('#table_format').DataTable();
+                $('.dataTables_length').addClass('bs-select');
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+﻿    <div class="row">        
+        <div class="col-sm-6"><h4>Complaints</h4></div>
+        <div class="col-sm-4"><div id="divLoading" /></div>       
+        <div class="control-label col-sm-6">
+            <button id="filter" onclick="applyFilter()" class="btn-success">apply</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm"></div>
+        <div class="col-sm"></div>
+    </div>
+    <div class="row">
+        <div id="ctDiv" class="col-sm-16" style="display:none;">
+
+        </div>
+    </div>
+<script>
+    $(document).ready(function () {
+        getUserInformation();
+    });
+    function applyFilter() {
+        $("div#divLoading").addClass('show');
+        getAllComplaints();
+    }
+    function getUserInformation() {
+                var urlString = "/Home/GetUser"
+                $.ajax({
+                    type: "get",
+                    url: urlString,
+                    async: true,
+                    contentType: "application/json; charset=utf-8",
+                    dataType: 'json',
+                    success: function (data) {
+                        var result = data.data;
+                        if (result != null) {
+                            $('#userTitle').text(result.Title);
+                            localStorage.clear();
+                            localStorage.setItem("userInfo", JSON.stringify(result));                            
+                        }
+                    },
+                    error: function (err) {
+                        console.log(err);
+                    }
+                });
+            }
+    function getAllComplaints() {
+        var urlString = "/Home/ReadAllComplaints";
+        //var dvTable = $("#myTable");
+        //dvTable.html("");
+        var mainDiv = $("#ctDiv");
+        mainDiv.html("");
+        $.ajax({
+            type: 'POST',
+            url: urlString,
+            async: true,
+            dataType: 'json',
+            data: localStorage.getItem("userInfo"),
+            contentType: "application/json; charset=utf-8",
+            success: function (data) {
+                if (data) {
+                    $("#ctDiv").show();
+                    var result = JSON.parse(data);
+                    var table = "<table id=\"complaints\" class=\"table table-striped table-bordered\"><thead><tr><th>EMS CaseRef</th><th>Mailbox Name</th><th>Date Received</th><th>Segment</th><th>Product Type</th><th>Related Process</th><th>Status</th><th>Action</th></tr></thead><tbody id=\"myTable\">";
+                    for (var i = 0; i < result.length; i++) {
+                        var elem = result[i];
+                        if (elem.CanWrite) {
+                            table += "<tr class=\"content\"><td>" + elem.EmsCaseReference + "</td><td>" + elem.MailboxName + "</td>   <td>" + elem.DateReceived + "</td><td>" + elem.SegmentName + "</td><td>" + elem.ProductType + "</td><td>" + elem.RelatedProcess + "</td><td>" + elem.Status + "</td><td><a href=\"/Home/Edit?SpId=" + elem.SpId + "&cl=" + elem.ClName + "&rc=" + elem.RcaName + "&s=" + elem.SegmentName + "\">Edit</a></td></tr>";
+                        }
+                        else {
+                            table += "<tr class=\"content\"><td>" + elem.EmsCaseReference + "</td><td>" + elem.MailboxName + "</td>   <td>" + elem.DateReceived + "</td><td>" + elem.SegmentName + "</td><td>" + elem.ProductType + "</td><td>" + elem.RelatedProcess + "</td><td>" + elem.Status + "</td><td></td></tr>";
+                        }
+                    }
+                    table += "</tbody></table>";
+                    mainDiv.html(table);
+                    $('#complaints').DataTable();
+                    $('.dataTables_length').addClass('bs-select');
+
+                    $("div#divLoading").removeClass('show');
+                }
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        });
+    }
+</script>

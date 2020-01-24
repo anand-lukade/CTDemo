@@ -1,0 +1,300 @@
+﻿@model Repository.Models.Complaint    
+<form>
+    <table style="width:100%">
+        <tr style="height:14px;">
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.Reference)</b>
+            </td>
+            <td>
+                @Html.Label(Model.Reference)
+            </td>
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.EmsCaseReference)</b>
+            </td>
+            <td>
+                @Html.Label(Model.EmsCaseReference)
+            </td>
+        </tr>
+        <tr style="height:14px;">
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.MailboxName)</b>
+            </td>
+            <td>
+                @Html.Label(Model.MailboxName)
+            </td>
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.SchemePolicyContractNo)</b>
+            </td>
+            <td>
+                @Html.Label(Model.SchemePolicyContractNo)
+            </td>
+        </tr>
+
+        <tr style="height:14px;">
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.MemberCode)</b>
+            </td>
+            <td>
+                @Html.Label(Model.MemberCode)
+            </td>
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.IdNumber)</b>
+            </td>
+            <td>
+                @Html.Label(Model.IdNumber)
+            </td>
+        </tr>
+        <tr style="height:14px;">
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.Surname)</b>
+            </td>
+            <td>
+                @Html.Label(Model.Surname)
+            </td>
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.Source)</b>
+            </td>
+            <td>
+                @Html.Label(Model.Source)
+            </td>
+        </tr>
+
+        <tr style="height:14px;">
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.SourceType)</b>
+            </td>
+            <td>
+                @Html.Label(Model.SourceType)
+            </td>
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.DepartmentInvolved)</b>
+            </td>
+            <td>
+                @Html.Label(Model.DepartmentInvolved)
+            </td>
+        </tr>
+        <tr style="height:14px;">
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.RelatedProcess)</b>
+            </td>
+            <td>
+                @Html.Label(Model.RelatedProcess)
+            </td>
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.Levels)</b>
+            </td>
+            <td>
+                @Html.Label(Model.Levels)
+            </td>
+        </tr>
+        <tr style="height:14px;">
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.PreviousLevelComp)</b>
+            </td>
+            <td>
+                @Html.Label(Model.PreviousLevelComp)
+            </td>
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.DateReceived)</b>
+            </td>
+            <td>
+                @Html.Label(Convert.ToString(Model.DateReceived))
+            </td>
+        </tr>
+
+        <tr style="height:14px;">
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.QueryClosedDate)</b>
+            </td>
+            <td>
+                @Html.Label(Convert.ToString(Model.QueryClosedDate))
+            </td>
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.ExtensionRequested)</b>
+            </td>
+            <td>
+                @Html.Label(Model.ExtensionRequested)
+            </td>
+        </tr>
+
+        <tr style="height:14px;">
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.ExtensionRequestedComment)</b>
+            </td>
+            <td>
+                @Html.Label(Model.ExtensionRequestedComment)
+            </td>
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.RenegotiatedDueDate)</b>
+            </td>
+            <td>
+                @Html.Label(Convert.ToString(Model.RenegotiatedDueDate))
+            </td>
+        </tr>
+        <tr style="height:14px;">
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.ProductType)</b>
+            </td>
+            <td>
+                @Html.Label(Model.ProductType))
+            </td>
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.BenefitType)</b>
+            </td>
+            <td>
+                @Html.Label(Model.BenefitType)
+            </td>
+        </tr>
+
+        <tr style="height:14px;">
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.BenefitDetail)</b>
+            </td>
+            <td>
+                @Html.Label(Model.BenefitDetail))
+            </td>
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.Category)</b>
+            </td>
+            <td>
+                @Html.Label(Model.Category)
+            </td>
+        </tr>
+
+        <tr style="height:14px;">
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.TcfComplaintOutcome)</b>
+            </td>
+            <td>
+                @Html.Label(Model.TcfComplaintOutcome)
+            </td>
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.TcfComplaintRelatedTo)</b>
+            </td>
+            <td>
+                @Html.Label(Model.TcfComplaintRelatedTo)
+            </td>
+        </tr>
+
+        <tr style="height:14px;">
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.DepartmentAtFault)</b>
+            </td>
+            <td>
+                @Html.Label(Model.DepartmentAtFault))
+            </td>
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.RelatedToFund)</b>
+            </td>
+            <td>
+                @Html.Label(Model.RelatedToFund)
+            </td>
+        </tr>
+        <tr style="height:14px;">
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.Outcome)</b>
+            </td>
+            <td>
+                @Html.Label(Model.Outcome))
+            </td>
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.WriteOffAmount)</b>
+            </td>
+            <td>
+                @Html.Label(Model.WriteOffAmount)
+            </td>
+        </tr>
+        <tr style="height:14px;">
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.TlComplaintOwner)</b>
+            </td>
+            <td>
+                @Html.Label(Model.TlComplaintOwner))
+            </td>
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.RcTargetCompletionDate)</b>
+            </td>
+            <td>
+                @Html.Label(Convert.ToString(Model.RcTargetCompletionDate))
+            </td>
+        </tr>
+        <tr style="height:14px;">
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.ComplaintResponder)</b>
+            </td>
+            <td>
+                @Html.Label(Model.ComplaintResponder))
+            </td>
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.ClosedwithinSLA)</b>
+            </td>
+            <td>
+                @Html.Label(Model.ClosedwithinSLA)
+            </td>
+        </tr>
+        <tr style="height:14px;">
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.RCAFindings)</b>
+            </td>
+            <td>
+                @Html.Label(Model.RCAFindings)
+            </td>
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.ComplaintTheme)</b>
+            </td>
+            <td>
+                @Html.Label(Model.ComplaintTheme)
+            </td>
+        </tr>
+
+        <tr style="height:14px;">
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.FinancialImpact)</b>
+            </td>
+            <td>
+                @Html.Label(Model.FinancialImpact))
+            </td>
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.LitigationAction)</b>
+            </td>
+            <td>
+                @Html.Label(Model.LitigationAction)
+            </td>
+        </tr>
+
+        <tr style="height:14px;">
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.Status)</b>
+            </td>
+            <td>
+                @Html.Label(Model.Status))
+            </td>
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.RootCauseAnalysis)</b>
+            </td>
+            <td>
+                @Html.DropDownListFor(model => model.RcId, ViewBag.Rcas != null ? (IEnumerable<SelectListItem>)ViewBag.Rcas : Enumerable.Empty<SelectListItem>(), "", new { @class = "form-control" })                
+            </td>
+        </tr>
+        <tr style="height:14px;">
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <b>@Html.LabelFor(model => model.ReasonForSlaBreach)</b>
+            </td>
+            <td>
+                <input type="text" class="form-control" style="width:100%;"/>
+            </td>
+            <td style="text-align:right;padding-right:10px;width:25%;">
+                <button id="submit" class="btn btn-success">Update</button>
+            </td>
+            <td>
+                
+            </td>
+        </tr>
+    </table>          
+</form>
+<script>
+    $(document).ready(function () {            
+        var result = JSON.parse(localStorage.getItem("userInfo"));
+        $('#userTitle').text(result.Title);
+    });
+</script>

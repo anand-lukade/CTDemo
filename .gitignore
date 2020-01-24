@@ -3,3 +3,8 @@
 ################################################################################
 
 /.vs/config/applicationhost.config
+/gladius/obj/Debug
+/gladius/bin
+/packages
+/Repository/bin/Debug
+/Repository/obj/Debug
